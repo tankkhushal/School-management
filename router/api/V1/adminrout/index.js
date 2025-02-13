@@ -21,4 +21,8 @@ router.get("/logout" ,passport.authenticate("jwt", { failureRedirect: "/api/admi
 
 router.post("/changpassword" ,passport.authenticate("jwt", { failureRedirect: "/api/adminLoginFailure" }),adminctl.changpassword)
 
+router.post("/sendmail" ,adminctl.sendmail )
+
+router.post("/updatePassword" ,adminctl.updatePassword )
+
 module.exports = router
